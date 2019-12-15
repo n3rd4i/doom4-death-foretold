@@ -14,18 +14,6 @@ $packageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 
-## Install doom-d4t-accurate-music-addon
-## https://www.moddb.com/mods/death-foretold/addons/doom-d4t-accurate-music-addon
-$url = Get-ModdbDlUrl 'https://www.moddb.com/addons/start/174491'
-$packageArgs = @{
-  packageName   = "$env:ChocolateyPackageName" + "DOOM2016_OST"
-  unzipLocation = $installLocation
-  url           = $url
-  checksum      = '6F3D92CBEE24DC5009C323F83B919D9DEC187FE14D84134DD46B4353020CC0C0'
-  checksumType  = 'sha256'
-}
-Install-ChocolateyZipPackage @packageArgs
-
 ## Install d4t-keysncorpses
 # https://www.moddb.com/mods/death-foretold/addons/d4t-keysncorpses
 $url = Get-ModdbDlUrl 'https://www.moddb.com/addons/start/186106'
@@ -40,8 +28,6 @@ Install-ChocolateyZipPackage @packageArgs
 
 
 ## Download & Convert game shortcuts icon
-# $iconSrc = 'D4T_logo.png'
-# $iconSrcPath = "$(Join-Path $ENV:TEMP $iconSrc)"
 $iconName = 'D4T_logo.ico'
 $iconPath = "$(Join-Path $toolsDir $iconName)"
 Get-ChocolateyWebFile -PackageName $iconName `

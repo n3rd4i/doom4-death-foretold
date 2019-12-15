@@ -11,7 +11,7 @@
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>2.5.0</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/n3rd4i/doom4-death-foretold.git</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>n3rd4i</owners>
     <!-- ============================== -->
@@ -19,18 +19,18 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>doom4-death-foretold (Install)</title>
-    <authors>DBThanatos</authors>
+    <authors>DBThanatos, strongbelly</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://www.moddb.com/mods/death-foretold/downloads/death-foretold-d4t-25</projectUrl>
+    <projectUrl>https://www.moddb.com/mods/death-foretold</projectUrl>
     <iconUrl>https://cdn.statically.io/img/media.moddb.com/cache/images/downloads/1/186/185359/thumb_620x2000/D4T-.png</iconUrl>
-    <!-- <copyright>Year Software Vendor</copyright> -->
+    <copyright>2017 Moddb</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
     <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
-    <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <docsUrl>https://www.moddb.com/mods/death-foretold/news/d4t-v25-is-out-now</docsUrl>
+    <mailingListUrl>https://www.moddb.com/mods/death-foretold#commentform</mailingListUrl>
+    <bugTrackerUrl>https://discordapp.com/invite/RN9hhmA</bugTrackerUrl>
     <tags>doom4-death-foretold doom doom4 mod</tags>
     <summary>Doom2 mod</summary>
     <description>
@@ -56,7 +56,6 @@ Or jump into Deathmatch with the completely rebalanced weapons and see who's bet
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <dependencies>
       <dependency id="moddb.extension" version="0.1.1" />
-      <!-- <dependency id="png2ico" version="2008.12.08" /> -->
       <dependency id="freedoom" version="0.12.1" />
     </dependencies>
   </metadata>
