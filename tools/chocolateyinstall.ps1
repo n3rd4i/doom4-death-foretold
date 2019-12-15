@@ -46,6 +46,13 @@ Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'D4T Rea
   -TargetPath "$(Join-Path $installLocation 'D4T Readme v2.5.txt')"
 
 Install-ChocolateyShortcut `
+  -ShortcutFilePath "$(Join-Path $startMenuDir 'Doom4 - Death Foretold (Doom1).lnk')" `
+  -TargetPath "$zandronum" `
+  -Arguments "$ModPack $D4T_KEYSNCORPSES -file $DOOM2016_OST -iwad $iWAD1" `
+  -WorkingDirectory "$installLocation" `
+  -IconLocation "$iconPath"
+
+Install-ChocolateyShortcut `
   -ShortcutFilePath "$(Join-Path $startMenuDir 'Doom4 - Death Foretold.lnk')" `
   -TargetPath "$zandronum" `
   -Arguments "$ModPack $D4T_KEYSNCORPSES -file $DOOM2016_OST -iwad $iWAD2" `

@@ -30,7 +30,7 @@
     <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
     <docsUrl>https://www.moddb.com/mods/death-foretold/news/d4t-v25-is-out-now</docsUrl>
     <mailingListUrl>https://www.moddb.com/mods/death-foretold#commentform</mailingListUrl>
-    <bugTrackerUrl>https://discordapp.com/invite/RN9hhmA</bugTrackerUrl>
+    <bugTrackerUrl>https://discord.gg/3XXcdv2</bugTrackerUrl>
     <tags>doom4-death-foretold doom doom4 mod</tags>
     <summary>Doom2 mod</summary>
     <description>
@@ -48,6 +48,11 @@ Coop with your squad and kick major ass butt.
 
 Or jump into Deathmatch with the completely rebalanced weapons and see who's better at piling corpses
 
+## Addons
+
+### [D4T Keys-n-Corpses](https://www.moddb.com/mods/death-foretold/addons/d4t-keysncorpses)
+
+An addon that can replace the keycards with corpses holding the keys. (similar to what you see in Doom(2016)
 
     </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
