@@ -21,8 +21,8 @@
     <title>doom4-death-foretold (Install)</title>
     <authors>DBThanatos</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>hhttps://www.moddb.com/mods/death-foretold/downloads/death-foretold-d4t-25</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/doom4-death-foretold.png</iconUrl>-->
+    <projectUrl>https://www.moddb.com/mods/death-foretold/downloads/death-foretold-d4t-25</projectUrl>
+    <iconUrl>https://cdn.statically.io/img/media.moddb.com/cache/images/downloads/1/186/185359/thumb_620x2000/D4T-.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
