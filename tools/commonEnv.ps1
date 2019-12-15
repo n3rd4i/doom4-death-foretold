@@ -7,4 +7,5 @@ $startMenuDir = [IO.Path]::Combine($ENV:ProgramData, 'Microsoft\Windows\Start Me
 # $shortcutPath = [IO.Path]::Combine($ENV:UserProfile, 'Desktop', "$GameName.lnk")
 
 $ModPack = "D4Tv2.5.pk3"
-# $D4Tsprites = 'QCDE D4T New Sprites v1.1.1.pk3'
+$DOOM2016_OST = 'DOOM2016_OST_D4T.wad'
+$D4T_KEYSNCORPSES = 'STR_D4T_Keys_N_Corpses_v1.pk3'

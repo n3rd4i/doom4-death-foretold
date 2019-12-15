@@ -14,6 +14,31 @@ $packageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 
+## Install doom-d4t-accurate-music-addon
+## https://www.moddb.com/mods/death-foretold/addons/doom-d4t-accurate-music-addon
+$url = Get-ModdbDlUrl 'https://www.moddb.com/addons/start/174491'
+$packageArgs = @{
+  packageName   = "$env:ChocolateyPackageName" + "DOOM2016_OST"
+  unzipLocation = $installLocation
+  url           = $url
+  checksum      = '6F3D92CBEE24DC5009C323F83B919D9DEC187FE14D84134DD46B4353020CC0C0'
+  checksumType  = 'sha256'
+}
+Install-ChocolateyZipPackage @packageArgs
+
+## Install d4t-keysncorpses
+# https://www.moddb.com/mods/death-foretold/addons/d4t-keysncorpses
+$url = Get-ModdbDlUrl 'https://www.moddb.com/addons/start/186106'
+$packageArgs = @{
+  packageName   = "$env:ChocolateyPackageName" + "KEYSNCORPSES"
+  unzipLocation = $installLocation
+  url           = $url
+  checksum      = '0E51B782B26F41C7FCFB1EAA29D4EA9D77A255A84C362A34A8781590F535D7A3'
+  checksumType  = 'sha256'
+}
+Install-ChocolateyZipPackage @packageArgs
+
+
 ## StartMenu shortcuts
 Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'D4T Guide v2.5.lnk')" `
   -TargetPath "$(Join-Path $installLocation 'D4T Guide v2.5.rtf')"
@@ -25,7 +50,7 @@ Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'D4T Rea
 Install-ChocolateyShortcut `
   -ShortcutFilePath "$(Join-Path $startMenuDir 'Doom4 - Death Foretold.lnk')" `
   -TargetPath "$zandronum" `
-  -Arguments "$ModPack -iwad $iWAD2" `
+  -Arguments "$ModPack $D4T_KEYSNCORPSES -file $DOOM2016_OST -iwad $iWAD2" `
   -WorkingDirectory "$installLocation"
   # -IconLocation "$(Join-Path $toolsDir 'assets\playa2a8.ico')" `
   # -IconLocation "$iconPath"
