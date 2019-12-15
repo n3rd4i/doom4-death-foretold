@@ -40,17 +40,15 @@ Install-ChocolateyZipPackage @packageArgs
 
 
 ## Download & Convert game shortcuts icon
-## https://zdoom.org/w/images/thumb/a/af/QCDE_logo.png/120px-QCDE_logo.png
-$iconSrc = 'D4T_logo.png'
-$iconSrcPath = "$(Join-Path $ENV:TEMP $iconSrc)"
-Get-ChocolateyWebFile -PackageName $iconSrc `
-  -FileFullPath $iconSrcPath `
-  -Url 'https://cdn.statically.io/img/media.moddb.com/cache/images/downloads/1/186/185359/thumb_620x2000/D4T-.png' `
-  -Checksum '55930B8E53087E9ABCA9CD47EBB520C751EC48D86D6E3814E9180581AEF63C2B' `
-  -ChecksumType 'sha256'
+# $iconSrc = 'D4T_logo.png'
+# $iconSrcPath = "$(Join-Path $ENV:TEMP $iconSrc)"
 $iconName = 'D4T_logo.ico'
 $iconPath = "$(Join-Path $toolsDir $iconName)"
-& png2ico.exe $iconPath $iconSrcPath
+Get-ChocolateyWebFile -PackageName $iconName `
+  -FileFullPath $iconPath `
+  -Url 'http://www.iconarchive.com/download/i1894/3xhumed/mega-games-pack-40/Doom-4-1.ico' `
+  -Checksum '7C8F535E81E89FFB8310CCC0A87EE6146992CF95526D9F8DDA0835F25D3967A6' `
+  -ChecksumType 'sha256'
 
 
 ## StartMenu shortcuts
@@ -65,5 +63,5 @@ Install-ChocolateyShortcut `
   -ShortcutFilePath "$(Join-Path $startMenuDir 'Doom4 - Death Foretold.lnk')" `
   -TargetPath "$zandronum" `
   -Arguments "$ModPack $D4T_KEYSNCORPSES -file $DOOM2016_OST -iwad $iWAD2" `
-  -WorkingDirectory "$installLocation"
+  -WorkingDirectory "$installLocation" `
   -IconLocation "$iconPath"
