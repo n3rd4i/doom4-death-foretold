@@ -39,6 +39,20 @@ $packageArgs = @{
 Install-ChocolateyZipPackage @packageArgs
 
 
+## Download & Convert game shortcuts icon
+## https://zdoom.org/w/images/thumb/a/af/QCDE_logo.png/120px-QCDE_logo.png
+$iconSrc = 'D4T_logo.png'
+$iconSrcPath = "$(Join-Path $ENV:TEMP $iconSrc)"
+Get-ChocolateyWebFile -PackageName $iconSrc `
+  -FileFullPath $iconSrcPath `
+  -Url 'https://cdn.statically.io/img/media.moddb.com/cache/images/downloads/1/186/185359/thumb_620x2000/D4T-.png' `
+  -Checksum '55930B8E53087E9ABCA9CD47EBB520C751EC48D86D6E3814E9180581AEF63C2B' `
+  -ChecksumType 'sha256'
+$iconName = 'D4T_logo.ico'
+$iconPath = "$(Join-Path $toolsDir $iconName)"
+& png2ico.exe $iconPath $iconSrcPath
+
+
 ## StartMenu shortcuts
 Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'D4T Guide v2.5.lnk')" `
   -TargetPath "$(Join-Path $installLocation 'D4T Guide v2.5.rtf')"
@@ -52,5 +66,4 @@ Install-ChocolateyShortcut `
   -TargetPath "$zandronum" `
   -Arguments "$ModPack $D4T_KEYSNCORPSES -file $DOOM2016_OST -iwad $iWAD2" `
   -WorkingDirectory "$installLocation"
-  # -IconLocation "$(Join-Path $toolsDir 'assets\playa2a8.ico')" `
-  # -IconLocation "$iconPath"
+  -IconLocation "$iconPath"
