@@ -14,19 +14,6 @@ $packageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 
-## Install d4t-keysncorpses
-# https://www.moddb.com/mods/death-foretold/addons/d4t-keysncorpses
-$url = Get-ModdbDlUrl 'https://www.moddb.com/addons/start/186106'
-$packageArgs = @{
-  packageName   = "$env:ChocolateyPackageName" + "KEYSNCORPSES"
-  unzipLocation = $installLocation
-  url           = $url
-  checksum      = '0E51B782B26F41C7FCFB1EAA29D4EA9D77A255A84C362A34A8781590F535D7A3'
-  checksumType  = 'sha256'
-}
-Install-ChocolateyZipPackage @packageArgs
-
-
 ## Download & Convert game shortcuts icon
 $iconName = 'D4T_logo.ico'
 $iconPath = "$(Join-Path $toolsDir $iconName)"
@@ -53,7 +40,7 @@ Install-ChocolateyShortcut `
   -IconLocation "$iconPath"
 
 Install-ChocolateyShortcut `
-  -ShortcutFilePath "$(Join-Path $startMenuDir 'Doom4 - Death Foretold.lnk')" `
+  -ShortcutFilePath "$(Join-Path $startMenuDir 'Doom4 - Death Foretold (Doom2).lnk')" `
   -TargetPath "$zandronum" `
   -Arguments "$ModPack $D4T_KEYSNCORPSES -file $DOOM2016_OST -iwad $iWAD2" `
   -WorkingDirectory "$installLocation" `
