@@ -3,16 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <!-- This section is about this package, although id and version have ties back to the software -->
-    <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
-    <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
     <id>doom4-death-foretold</id>
-    <!-- version should MATCH as closely as possible with the underlying software -->
-    <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
-    <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>2.5.0</version>
+    <!-- https://chocolatey.org/docs/create-packages#package-fix-version-notation -->
+    <version>2.5.0.20200505</version>
     <packageSourceUrl>https://github.com/n3rd4i/doom4-death-foretold.git</packageSourceUrl>
-    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>n3rd4i</owners>
     <!-- ============================== -->
 
@@ -31,7 +25,7 @@
     <docsUrl>https://www.moddb.com/mods/death-foretold/news/d4t-v25-is-out-now</docsUrl>
     <mailingListUrl>https://www.moddb.com/mods/death-foretold#commentform</mailingListUrl>
     <bugTrackerUrl>https://discord.gg/3XXcdv2</bugTrackerUrl>
-    <tags>doom4-death-foretold doom doom4 mod</tags>
+    <tags>doom4-death-foretold doom doom4 mod d4t</tags>
     <summary>Doom2 mod</summary>
     <description>
 
