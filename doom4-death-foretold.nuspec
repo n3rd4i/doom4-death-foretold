@@ -57,6 +57,7 @@ An addon that can replace the keycards with corpses holding the keys. (similar t
       <dependency id="moddb.extension" version="0.1.1" />
       <dependency id="freedoom" version="0.12.1" />
       <dependency id="d4t-addons-keysncorpses" version="04.12.2019" />
+      <dependency id="kb2919355" />
     </dependencies>
   </metadata>
   <files>
