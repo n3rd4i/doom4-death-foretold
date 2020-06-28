@@ -23,6 +23,12 @@ Get-ChocolateyWebFile -PackageName $iconName `
   -Checksum '7C8F535E81E89FFB8310CCC0A87EE6146992CF95526D9F8DDA0835F25D3967A6' `
   -ChecksumType 'sha256'
 
+# Cleanup link first (safely)
+& $ENV:COMSPEC /C IF EXIST $pk3_lnk DEL /S /Q $pk3_lnk
+
+# Install symbolic link for later use
+$pk3_src = "$(Join-Path $installLocation $ModPack)"
+& $ENV:COMSPEC /C MKLINK $pk3_lnk $pk3_src
 
 ## StartMenu shortcuts
 Install-ChocolateyShortcut "$(Join-Path $startMenuDir 'D4T Guide v2.5.lnk')" `
