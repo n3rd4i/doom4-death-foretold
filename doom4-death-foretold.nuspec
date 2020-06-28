@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>doom4-death-foretold</id>
     <!-- https://chocolatey.org/docs/create-packages#package-fix-version-notation -->
-    <version>2.5.0.20200505</version>
+    <version>2.5.0.20200628</version>
     <packageSourceUrl>https://github.com/n3rd4i/doom4-death-foretold.git</packageSourceUrl>
     <owners>n3rd4i</owners>
     <!-- ============================== -->

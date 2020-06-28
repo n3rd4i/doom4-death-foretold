@@ -25,23 +25,17 @@ Get-ChocolateyWebFile -PackageName $iconName `
 
 
 ## StartMenu shortcuts
-Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'D4T Guide v2.5.lnk')" `
+Install-ChocolateyShortcut "$(Join-Path $startMenuDir 'D4T Guide v2.5.lnk')" `
   -TargetPath "$(Join-Path $installLocation 'D4T Guide v2.5.rtf')"
-Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'D4T Changelog v2.5.lnk')" `
+Install-ChocolateyShortcut "$(Join-Path $startMenuDir 'D4T Changelog v2.5.lnk')" `
   -TargetPath "$(Join-Path $installLocation 'D4T Changelog v2.5.txt')"
-Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'D4T Readme v2.5.lnk')" `
+Install-ChocolateyShortcut "$(Join-Path $startMenuDir 'D4T Readme v2.5.lnk')" `
   -TargetPath "$(Join-Path $installLocation 'D4T Readme v2.5.txt')"
 
-Install-ChocolateyShortcut `
-  -ShortcutFilePath "$(Join-Path $startMenuDir 'Doom4 - Death Foretold (Doom1).lnk')" `
-  -TargetPath "$zandronum" `
-  -Arguments "$ModPack $D4T_KEYSNCORPSES -file $DOOM2016_OST -iwad $iWAD1" `
-  -WorkingDirectory "$installLocation" `
-  -IconLocation "$iconPath"
+Install-ChocolateyShortcut "$(Join-Path $startMenuDir 'Doom4 - Death Foretold (Doom1).lnk')" `
+  -TargetPath "$zandronum" -Arguments "$ModPack $D4T_KEYSNCORPSES -iwad $iWAD1" `
+  -WorkingDirectory "$installLocation" -IconLocation "$iconPath"
 
-Install-ChocolateyShortcut `
-  -ShortcutFilePath "$(Join-Path $startMenuDir 'Doom4 - Death Foretold (Doom2).lnk')" `
-  -TargetPath "$zandronum" `
-  -Arguments "$ModPack $D4T_KEYSNCORPSES -file $DOOM2016_OST -iwad $iWAD2" `
-  -WorkingDirectory "$installLocation" `
-  -IconLocation "$iconPath"
+Install-ChocolateyShortcut "$(Join-Path $startMenuDir 'Doom4 - Death Foretold (Doom2).lnk')" `
+  -TargetPath "$zandronum" -Arguments "$ModPack $D4T_KEYSNCORPSES -iwad $iWAD2" `
+  -WorkingDirectory "$installLocation" -IconLocation "$iconPath"
